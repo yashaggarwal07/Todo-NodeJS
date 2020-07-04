@@ -1,0 +1,108 @@
+body{
+  background-color: darkgray;
+}
+hr{
+  background-color: black;
+}
+input:hover{
+  background-color: lightgray;
+}
+li{
+list-style-type : none;
+}
+.todo_div{
+  width: 50%;
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  height: 7 5%;
+  background-color: white;
+}
+#header{
+  margin-top: 0%;
+  margin-left: 38%;
+  font-size: 2vw;
+}
+#description{
+  margin-top:-1%;
+  margin-left: 2%;
+  font-size: 1vw;
+  margin-bottom: 0%;
+}
+.input_description{
+  margin-top: 0%;
+    width: 95%;
+    margin-left: 2%;
+    height: 7vh;
+    border: none;
+    outline: none;
+    font-size: 1.5vw;
+    font-family: serif;
+}
+th{
+  font-size: 1vw;
+  font-family: serif;
+
+}
+.select_align{
+  margin-left: 10%;
+  width: 22vw;
+  height: 5vh;
+  font-size: 1vw;
+  color: grey;
+  border: none;
+  outline: none;
+}
+
+.input_date{
+  margin-left: 42%;
+  width: 18vw;
+  height: 5vh;
+  font-size: 1vw;
+  color: grey;
+  border: none;
+  outline: none;
+}
+
+button{
+  width: 12vw !important;
+  height: 8vh;
+  font-size: 1.5vw;
+  outline: none;
+  border: 0px;
+}
+.add{
+  background-color: black;
+
+}
+.delete{
+  background-color: red;
+}
+.Add{
+  color:white;
+
+}
+.Delete{
+  color:white;
+}
+.cat{
+  margin-left: 587px;
+    position: absolute;
+    background-color: yellow;
+    height: 4vh;
+    width: 15vh;
+    margin-top: -25px;
+    text-align: center;
+}
+.Desc{
+  font-size: 25px;
+  position: relative;
+}
+.date_below{
+  position: fixed;
+  margin-left: 3vh;
+  font-size: 15px;
+}
+input[type=checkbox]:checked + label.Desc{
+  text-decoration: line-through;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/home.css">
+  </head>
+  <body>
+    <div class="todo_div">
+      <label id="header">ToDo App</label>
+      <hr>
+      <form  action="/createlist" method="post">
+          <p id="description">DESCRIPTION</p>
+          <input class="input_description" type="text" name="description" placeholder="Add your task" required>
+          <hr>
+          <table>
+            <tr>
+              <th>CATEGORY</th>
+              <th>DATE</th>
+            </tr>
+            <tr>
+              <td>
+          <select class="select_align" name="category" required>
+             <option value="" selected disabled hidden>Choose here</option>
+            <option value="Personal">Personal</option>
+            <option value="Important">Important</option>
+            <option value="Today's Work">Today's Work</option>
+            <option value="Office">Office</option>
+            <option value="Very Important">Very Important</option>
+          </select>
+        </td>
+
+        <td><input class="input_date" type="date" name="date" required></td>
+      </tr>
+      </table>
+      <hr>
+        <center><button type="submit" class="add"><label class="Add"><i class="fa fa-plus"></i>Add Task</label></button>
+          <!-- <button type="submit" class="delete"><label class="Delete"><i class="fa fa-trash"></i>Delete Task</label></button> -->
+        </center>
+        <hr>
+      </form>
+        <div>
+            <%  for(let i of todo_list) { %>
+              
+                <ul>
+                  <li><input type="checkbox" id="check" value="1">
+                    <!-- <a href="/delete-description/?id=<%= i.id%>">Delete</a> -->
+                    <label class="Desc" for="check"><%= i.description %></label>
+                    <a href="/delete-description/?id=<%= i.id%>">Delete</a>
+                  </li>
+                  
+                   <li class="cat">
+                    <%= i.category %></li>
+                  
+                <li class="date_below">
+                  <i class="fa fa-calendar"></i><%= i.date %>
+                </li>
+              </ul>
+              <% } %>
+              </div>
+    </div>
+  
+  </body>
+</html>
